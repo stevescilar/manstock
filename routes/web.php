@@ -26,4 +26,7 @@ Route::middleware([
     // Category Controller
     Route::get('/categories', [CategoryController::class, 'index'])->name('category'); 
     Route::post('/categories/add', [CategoryController::class, 'addCat'])->name('store.category'); 
+    Route::get('/category/edit/{id}', [CategoryController::class, 'Edit']); 
+    Route::post('/category/update/{id}', [CategoryController::class, 'Update']); 
+
 });
