@@ -52,9 +52,9 @@
                                     </tr>
                                     @endforeach
                                 </tbody>  
-                                {{-- <tfoot>This is amazing</tfoot> --}}
+                               
                             </table>
-                            {{-- pagination in laravel --}}
+                            {{-- pagination in laravel in ref to the category controller --}}
                             <div class="card-footer">{{ $categories->links()}}</div>
                             
 
