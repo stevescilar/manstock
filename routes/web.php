@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +23,18 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+
+        // eloquent ORM -fetch all users
+        $users = User::all();
+      
+        return view('dashboard',compact('users'));
+
     })->name('dashboard');
 });
+
+// Route::middleware(['auth:sanctum','verified']) ->get('/dashboard', function () {
+
+//     $users = User::all();
+      
+//     return view('dashboard',compact('users'));
+// })->name('dashboard');
