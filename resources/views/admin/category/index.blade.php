@@ -34,11 +34,11 @@
                                     </tr>
                                 </thead>  
                                 <tbody>
-                                    @php($i=1)
+                                    {{-- @php($i=1) --}}
                                     {{-- for each to fetch data --}}
                                     @foreach($categories as $category)
                                     <tr>
-                                        <th scope="row">{{ $i++ }} </th>
+                                        <th scope="row">{{ $categories->firstItem()+$loop->index }} </th>
                                         <td>{{ $category->category_name}}</td>
                                         <td>{{ $category->user_id}} </td>
                                        
@@ -46,13 +46,17 @@
                                             @if($category->created_at  == NULL)
                                             <span class="text-danger"> No Date set</span>
                                             @else
-                                            {{ $category->created_at->diffForHumans() }}</td>
+                                            {{ $category->created_at->diffForHumans() }}
                                             @endif
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>  
                                 {{-- <tfoot>This is amazing</tfoot> --}}
                             </table>
+                            {{-- pagination in laravel --}}
+                            <div class="card-footer">{{ $categories->links()}}</div>
+                            
 
                     </div>
                 </div>
