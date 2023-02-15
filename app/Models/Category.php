@@ -15,4 +15,9 @@ class Category extends Model
         'category_name',
     ];
 
+    // creating a relationship between categories table and user table
+    public function user() {
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
+
 }
