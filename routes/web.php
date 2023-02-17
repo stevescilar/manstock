@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\BrandController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -33,5 +34,9 @@ Route::middleware([
     Route::get('/clean-delete/category/{id}',[CategoryController::class, 'cleanDelete']);
 
     
-
+    //Brands
+    Route::get('/brands', [BrandController::class, 'index'])->name('brands'); 
+    // store.brand
+    Route::post('/brands/add', [BrandController::class, 'addBrand'])->name('store.brand'); 
+    
 });

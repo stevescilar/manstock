@@ -18,6 +18,9 @@
                     <x-nav-link href="{{ route('category')}}">
                         Category
                     </x-nav-link>
+                    <x-nav-link href="{{ route('brands')}}">
+                        Brands
+                    </x-nav-link>
                 </div>
             </div>
 
