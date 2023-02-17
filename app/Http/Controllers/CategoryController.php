@@ -12,7 +12,9 @@ class CategoryController extends Controller
 {
     public function index() {
         $categories = Category::latest()->paginate(5);
-        return view('admin.category.index',compact('categories'));
+        $trashCat = Category::onlyTrashed()->latest()->paginate(3);
+
+        return view('admin.category.index',compact('categories','trashCat'));
     }
 
     public function addCat(Request $request) {
