@@ -20,9 +20,10 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-
                         @endif
-                        <div class="card-header">Categories</div>
+                        <div class="card-header">Available Categories 
+                            <i style="float:right"; class='bx bxs-category'></i>
+                        </div>
 
                             <table class="table table-striped">
                                 <thead>
@@ -52,8 +53,8 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="{{ url('category/edit/'.$category->id) }}" class="btn btn-info">Edit</a>
-                                            <a href="{{ url('softdelete/category/')}}" class="btn btn-danger">Delete</a>
+                                            <a href="{{ url('category/edit/'.$category->id) }}" class="btn btn-info"><i class='bx bx-edit'></i></a>
+                                            <a href="{{ url('softdelete/category/'.$category->id)}}" class="btn btn-danger"><i class='bx bxs-trash'></i></a>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -95,7 +96,9 @@
                 
                 <div class="col-md-8">
                     <div class="card">
-                        <div class="card-header">Deleted</div>
+                        <div class="card-header">Deleted Files
+                            <i style="float:right;" class='bx bx-trash' ></i>
+                        </div>
 
                             <table class="table table-striped">
                                 <thead>
@@ -125,8 +128,8 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="{{ url('category/edit/'.$category->id) }}" class="btn btn-info">Edit</a>
-                                            <a href="" class="btn btn-danger">Delete</a>
+                                            <a href="{{ url('restore/category/'.$category->id) }}" class="btn btn-info">Restore</a>
+                                            <a href="{{ url('clean-delete/category/'.$category->id) }}" class="btn btn-danger"><i class='bx bxs-trash bx-burst' ></i></a>
                                         </td>
                                     </tr>
                                     @endforeach

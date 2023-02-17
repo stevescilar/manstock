@@ -45,4 +45,20 @@ class CategoryController extends Controller
         return Redirect()->route('category')->with('success','Category Updated Successfully');
 
     }
+
+    public function softDelete($id){
+        $delete = Category::find($id)->delete();
+        return Redirect()->back()->with('success','Category Is temporally Deleted');
+
+    }
+
+    public function Restore($id){
+        $restore = Category::withTrashed()->find($id)->restore();
+        return Redirect()->back()->with('success','Category has been restored');
+
+    }
+    public function cleanDelete($id){
+        $clearTrash = Category::onlyTrashed()->find($id)->forceDelete();
+        return Redirect()->back()->with('success','Category has been been permanently deleted');
+    }
 }

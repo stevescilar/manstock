@@ -27,6 +27,11 @@ Route::middleware([
     Route::get('/categories', [CategoryController::class, 'index'])->name('category'); 
     Route::post('/categories/add', [CategoryController::class, 'addCat'])->name('store.category'); 
     Route::get('/category/edit/{id}', [CategoryController::class, 'Edit']); 
-    Route::post('/category/update/{id}', [CategoryController::class, 'Update']); 
+    Route::post('/category/update/{id}', [CategoryController::class, 'Update']);
+    Route::get('/softdelete/category/{id}',[CategoryController::class, 'softDelete']);
+    Route::get('/restore/category/{id}',[CategoryController::class, 'Restore']);
+    Route::get('/clean-delete/category/{id}',[CategoryController::class, 'cleanDelete']);
+
+    
 
 });
