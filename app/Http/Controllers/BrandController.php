@@ -15,4 +15,3 @@ class BrandController extends Controller
         return view ('admin.brands.index',compact('brands'));
     }
 }
-// jnv
