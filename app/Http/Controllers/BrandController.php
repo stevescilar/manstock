@@ -95,7 +95,9 @@ class BrandController extends Controller
 
         }
 
-       
+    }
 
+    public function Delete() {
+        // gere
     }
 }
