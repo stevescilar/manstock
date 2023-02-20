@@ -38,6 +38,8 @@ Route::middleware([
     Route::get('/brands', [BrandController::class, 'index'])->name('brands'); 
     // store.brand
     Route::post('/brands/add', [BrandController::class, 'addBrand'])->name('store.brand'); 
-    //to be continued here
+    Route::get('/brand/edit/{id}', [BrandController::class, 'Edit']); 
+    Route::post('/brand/update/{id}', [BrandController::class, 'Update']);
+    
 
 });

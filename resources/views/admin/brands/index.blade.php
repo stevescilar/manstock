@@ -40,9 +40,10 @@
                                     {{-- for each to fetch data --}}
                                     @foreach($brands as $brand)
                                     <tr>
-                                        <th scope="row">{{ $categories->firstItem()+$loop->index }} </th>
+                                        <th scope="row">{{ $brands->firstItem()+$loop->index }} </th>
                                         <td>{{ $brand->brand_name}}</td>
-                                        <td>{{ $brand->brand_image}} </td> 
+                                        <td><img src="{{ asset($brand->brand_image)}}" style="height:40px; width:70px;" > </td> 
+
                                         {{-- above using one-0ne relationship --}}
                                        
                                         <td>
@@ -54,7 +55,7 @@
                                         </td>
                                         <td>
                                             <a href="{{ url('brand/edit/'.$brand->id) }}" class="btn btn-info"><i class='bx bx-edit'></i></a>
-                                            <a href="{{ url('softdelete/brand/'.$brand->id)}}" class="btn btn-danger"><i class='bx bxs-trash'></i></a>
+                                            <a href="{{ url('brand/delete/'.$brand->id) }}" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger"><i class='bx bxs-trash'></i></a>
                                         </td>
                                     </tr>
                                     @endforeach
