@@ -98,7 +98,6 @@ class BrandController extends Controller
     }
 
     public function Delete() {
-        // gereration to progress from here
-        //hhuhiioojn[]
+        
     }
 }
