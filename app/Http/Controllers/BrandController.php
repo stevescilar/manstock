@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Brand;
 use Illuminate\Support\Carbon;
+use Image;
 
 class BrandController extends Controller
 {
@@ -29,15 +30,10 @@ class BrandController extends Controller
 
         // image upload and manipulation
         $brand_image = $request->file('brand_image');
-
-        $gen_name = hexdec(uniqid());
-        $img_ext = strtolower($brand_image->getClientOriginalExtension());
-        $img_name = $gen_name.'.'.$img_ext;
-
-        // uploading image
-        $up_location = 'image/brand/';
-        $last_img = $up_location.$img_name;
-        $brand_image->move($up_location,$img_name);
+        // Generating image - using image intervention
+        $gen_name = hexdec(uniqid()).'.'.$brand_image->getClientOriginalExtension();
+        Image::make($brand_image)->resize(300,200)->save('image/brand/'.$gen_name);
+        $last_img = 'image/brand/'.$gen_name;
 
         Brand::insert([
             'brand_name' => $request->brand_name,
