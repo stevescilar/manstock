@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\MultiPicController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -41,6 +42,13 @@ Route::middleware([
     Route::get('/brand/edit/{id}', [BrandController::class, 'Edit']); 
     Route::post('/brand/update/{id}', [BrandController::class, 'Update']);
     Route::get('/brand/delete/{id}',[BrandController::class, 'Delete']);
+
+    //Gallery Route
+    Route::get('/gallery', [MultiPicController::class, 'index'])->name('gallery'); 
+    Route::post('/images/add', [MultiPicController::class, 'addImage'])->name('store.image'); 
+
+    
+
 
     
 
