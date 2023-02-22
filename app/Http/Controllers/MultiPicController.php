@@ -30,7 +30,7 @@ class MultiPicController extends Controller
 
         // image upload and manipulation
         $image= $request->file('image');
-        // storing the multiple images 
+        // storing the multiple images in db
         foreach($image as $multi_pic){
             // Generating image - using image intervention
             $gen_name = hexdec(uniqid()).'.'.$multi_pic->getClientOriginalExtension();
