@@ -50,7 +50,7 @@ Route::middleware([
     // Route::get('/images/delete',[MultiPicController::class, 'deleteImage'])->name()
     
 
-
+//f
     
 
 });
