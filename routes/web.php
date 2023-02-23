@@ -47,6 +47,7 @@ Route::middleware([
     Route::get('/gallery', [MultiPicController::class, 'index'])->name('gallery'); 
     Route::post('/images/add', [MultiPicController::class, 'addImage'])->name('store.image'); 
 
+    // Route::get('/images/delete',[MultiPicController::class, 'deleteImage'])->name()
     
 
 
