@@ -4,7 +4,7 @@
             Categories
         </h2>
     </x-slot>
-
+{{-- display fetched data --}}
     <div class="py-12">
         <div class="container">
             <div class="row">
