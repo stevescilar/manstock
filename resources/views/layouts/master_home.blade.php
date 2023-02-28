@@ -119,9 +119,7 @@
   </section><!-- End Hero -->
 
   <main id="main">
-    
-  @yield('home_content')
-   
+    @yield('home_content')
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -206,5 +204,5 @@
  
 
 </body>
-
+@include('front.body.foot-asset')
 </html>
