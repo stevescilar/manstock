@@ -35,10 +35,10 @@ Route::middleware([
     Route::get('/dashboard', function () {
 
         // eloquent ORM -fetch all users
-        $users = User::all();
+        // $users = User::all();
       
-        return view('dashboard',compact('users'));
-
+        // return view('admin.index',compact('users'));
+        return view('admin.index');
     })->name('dashboard');
 
 
