@@ -1,12 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\MultiPicController;
 use Illuminate\Support\Facades\DB;
-
+// use Auth;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 
@@ -15,6 +16,8 @@ Route::get('/email/verify', function () {
 return view('auth.verify-email');
 })->middleware('auth')->name('verification.notice');
 
+    // user.logout
+Route::get('/user/logout', [BrandController::class, 'Logout'])->name('user.logout');
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
@@ -24,7 +27,7 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome')->name('home');
 });
 
 Route::middleware([
@@ -58,7 +61,7 @@ Route::middleware([
     Route::post('/brands/add', [BrandController::class, 'addBrand'])->name('store.brand'); 
     Route::get('/brand/edit/{id}', [BrandController::class, 'Edit']); 
     Route::post('/brand/update/{id}', [BrandController::class, 'Update']);
-    Route::get('/brand/delete/{id}',[BrandController::class, 'Delete']);
+    Route::get('/brand/delete/{id}', [BrandController::class, 'Delete']);
 
     //Gallery Route
     Route::get('/gallery', [MultiPicController::class, 'index'])->name('gallery'); 
