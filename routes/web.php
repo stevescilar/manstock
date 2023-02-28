@@ -27,7 +27,7 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 
 
 Route::get('/', function () {
-    return view('welcome')->name('home');
+    return view('home');
 });
 
 Route::middleware([
@@ -38,10 +38,10 @@ Route::middleware([
     Route::get('/dashboard', function () {
 
         // eloquent ORM -fetch all users
-        // $users = User::all();
+        $users = User::all();
       
-        // return view('admin.index',compact('users'));
-        return view('admin.index');
+        return view('admin.index',compact('users'));
+        // return view('admin.index');
     })->name('dashboard');
 
 
