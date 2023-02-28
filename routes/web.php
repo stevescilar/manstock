@@ -5,6 +5,23 @@ use App\Models\User;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\MultiPicController;
+use Illuminate\Support\Facades\DB;
+
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+
+
+ // email verification 
+Route::get('/email/verify', function () {
+return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
+
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+    
+    return redirect('/dashboard');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -50,4 +67,7 @@ Route::middleware([
 
     
 
+  
+   
 });
+

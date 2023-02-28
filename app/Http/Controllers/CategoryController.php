@@ -10,6 +10,11 @@ use Illuminate\Support\Carbon;
 
 class CategoryController extends Controller
 {
+    // protect access
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function index() {
         $categories = Category::latest()->paginate(5);
         $trashCat = Category::onlyTrashed()->latest()->paginate(3);

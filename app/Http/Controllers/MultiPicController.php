@@ -6,11 +6,16 @@ use Illuminate\Http\Request;
 use App\Models\MultiPic;
 use Image;
 use Illuminate\Support\Carbon;
+use Auth;
 
 
 
 class MultiPicController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function index () {
         $images = MultiPic::all();
 

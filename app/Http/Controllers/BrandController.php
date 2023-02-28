@@ -6,10 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\Brand;
 use Illuminate\Support\Carbon;
 use Image;
+use Auth;
 
 class BrandController extends Controller
 {
-    //index
+    public function __construct(){
+        $this->middleware('auth');
+    }
     public function index (){
 
         $brands = Brand::latest()->paginate(5);
