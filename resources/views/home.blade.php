@@ -11,8 +11,9 @@
     
             <div class="row content">
               <div class="col-lg-6" data-aos="fade-right">
-                <h2>Eum ipsam laborum deleniti velitena</h2>
-                <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
+                <img src="{{ asset('frontend/assets/img/about.png')}}" alt="" style="width:500px">
+                {{-- <h2>Eum ipsam laborum deleniti velitena</h2>
+                <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3> --}}
               </div>
               <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
                 <p>
@@ -244,66 +245,66 @@
           </div>
         </section><!-- End Portfolio Section -->
     
-        <!-- ======= Our Clients Section ======= -->
+            <!-- ======= Our Clients Section ======= -->
         <section id="clients" class="clients">
           <div class="container" data-aos="fade-up">
-    
+
             <div class="section-title">
               <h2>Clients</h2>
             </div>
-    
+
             <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
-    
+
               <div class="col-lg-3 col-md-4 col-6">
                 <div class="client-logo">
-                  <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+                  <img src="{{ asset('frontend/assets/img/clients/client-1.png')}}" class="img-fluid" alt="">
                 </div>
               </div>
-    
+
               <div class="col-lg-3 col-md-4 col-6">
                 <div class="client-logo">
-                  <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+                  <img src="{{ asset('frontend/assets/img/clients/client-2.png')}}" class="img-fluid" alt="">
                 </div>
               </div>
-    
+
               <div class="col-lg-3 col-md-4 col-6">
                 <div class="client-logo">
-                  <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+                  <img src="{{ asset('frontend/assets/img/clients/client-3.png')}}" class="img-fluid" alt="">
                 </div>
               </div>
-    
+
               <div class="col-lg-3 col-md-4 col-6">
                 <div class="client-logo">
-                  <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+                  <img src="{{ asset('frontend/assets/img/clients/client-4.png')}}" class="img-fluid" alt="">
                 </div>
               </div>
-    
+
               <div class="col-lg-3 col-md-4 col-6">
                 <div class="client-logo">
-                  <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+                  <img src="{{ asset('frontend/assets/img/clients/client-5.png')}}" class="img-fluid" alt="">
                 </div>
               </div>
-    
+
               <div class="col-lg-3 col-md-4 col-6">
                 <div class="client-logo">
-                  <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+                  <img src="{{ asset('frontend/assets/img/clients/client-6.png')}}" class="img-fluid" alt="">
                 </div>
               </div>
-    
+
               <div class="col-lg-3 col-md-4 col-6">
                 <div class="client-logo">
-                  <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
+                  <img src="{{ asset('frontend/assets/img/clients/client-7.png')}}" class="img-fluid" alt="">
                 </div>
               </div>
-    
+
               <div class="col-lg-3 col-md-4 col-6">
                 <div class="client-logo">
-                  <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
+                  <img src="{{ asset('frontend/assets/img/clients/client-8.png')}}" class="img-fluid" alt="">
                 </div>
               </div>
-    
+
             </div>
-    
+
           </div>
         </section><!-- End Our Clients Section -->
     
