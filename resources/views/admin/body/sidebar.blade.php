@@ -58,6 +58,12 @@
                           <span class="nav-text">Add Brand</span>
                         </a>
                       </li>
+
+                      <li >
+                        <a class="sidenav-item-link" href="{{ route('services') }}">
+                          <span class="nav-text">Add Service</span>
+                        </a>
+                      </li>
                   
                       <li >
                         <a class="sidenav-item-link" href="{{ route('gallery') }}">

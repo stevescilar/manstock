@@ -4,10 +4,12 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Brand;
+use App\Models\Service;
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\MultiPicController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\DB;
 // use Auth;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
@@ -30,7 +32,8 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 
 Route::get('/', function () {
     $brands = Brand::all(); 
-    return view('home', compact('brands'));
+    $services = Service::all();
+    return view('home', compact('brands','services'));
 });
 
 Route::middleware([
@@ -71,9 +74,10 @@ Route::middleware([
     Route::post('/images/add', [MultiPicController::class, 'addImage'])->name('store.image'); 
 
 
+    // Services Route
+    Route::get('/services', [ServiceController::class, 'index'])->name('services');
+    Route::post('/services/add', [ServiceController::class, 'addService'])->name('store.service'); 
     
-
-  
    
 });
 
