@@ -23,7 +23,7 @@ class BrandController extends Controller
     public function addBrand(Request $request){
         $validateData = $request->validate([
             'brand_name' => 'required|unique:brands|min:4',
-            'brand_image' => 'required|mimes:jpg.jpeg,png',
+            'brand_image' => 'required|mimes:jpg,jpeg,png',
 
         ],
         [

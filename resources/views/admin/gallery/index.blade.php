@@ -1,9 +1,6 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Categories
-        </h2>
-    </x-slot>
+@extends('admin.admin_master')
+@section('admin')
+
 {{-- display fetched data --}}
     <div class="py-12">
         <div class="container">
@@ -43,15 +40,9 @@
                                         @error('image')
                                         <span class="text-danger"> {{ $message }}</span>   
                                         @enderror
-
-                                    </div>
-                                    
-                                    <button type="submit" class="btn btn-primary">  <i style="margin: auto;" class='bx bxs-save' ></i></button>
-                                </form>
-                            </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</x-app-layout>
+@endsection

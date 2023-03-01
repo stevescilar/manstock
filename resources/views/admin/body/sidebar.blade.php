@@ -44,26 +44,27 @@
                   
                   
                     
-                      <li  class="active" >
-                        <a class="sidenav-item-link" href="index.html">
-                          <span class="nav-text">Ecommerce</span>
-                          
-                        </a>
-                      </li>
-                    
-                  
+                      
 
-                  
-                  
-                    
-                      <li >
-                        <a class="sidenav-item-link" href="analytics.html">
-                          <span class="nav-text">Analytics</span>
-                          
-                          <span class="badge badge-success">new</span>
-                          
+                      <li   class="active">
+                        <a class="sidenav-item-link" href="{{ route('category') }}">
+                          <span class="nav-text">Add Category</span>
                         </a>
                       </li>
+                    
+                  
+                      <li >
+                        <a class="sidenav-item-link" href="{{ route('brands') }}">
+                          <span class="nav-text">Add Brand</span>
+                        </a>
+                      </li>
+                  
+                      <li >
+                        <a class="sidenav-item-link" href="{{ route('gallery') }}">
+                          <span class="nav-text">Gallery</span>
+                        </a>
+                      </li>
+                    {{-- gallery --}}
                     
                   
 
