@@ -53,7 +53,7 @@
                   <div class="card-body">
                     <h5 class="card-title">{{ $service->name }}</h5>
                     <p class="card-text">{{ $service->desc }}</p>
-                    <a href="#" class="btn btn-primary">More</a>
+                    <a href="#" class="btn btn-primary">check more</a>
                   </div>
                   <br> 
                 </div>
