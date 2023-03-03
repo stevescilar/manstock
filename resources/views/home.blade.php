@@ -42,7 +42,7 @@
     
             <div class="section-title">
               <h2>Services</strong></h2>
-              <p>We  Offer The Services in Towned</p>
+              <p>We  Offer The Services in Town</p>
             </div>
     
             <div class="row">
