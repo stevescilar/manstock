@@ -67,7 +67,7 @@
             </div>
     {{--nfjk  --}}
           </div>
-        </section><!-- End Services Section -->
+        </section><!-- End Services Sectinon -->
     
         <!-- ======= Portfolio Section ======= -->
         <section id="portfolio" class="portfolio">
@@ -183,7 +183,7 @@
             </div>
     
           </div>
-        </section><!-- End Portfolio Section -->
+        </section><!-- End Portfolio Sectijnon -->
     
             <!-- ======= Our Clients Section ======= -->
         <section id="clients" class="clients">
