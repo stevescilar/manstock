@@ -41,7 +41,7 @@
           <div class="container" data-aos="fade-up">
     
             <div class="section-title">
-              <h2>Services</strong></h2>
+              <h2>What we Offer</strong></h2>
               <p>We  Offer The Best Services</p>
             </div>
     
