@@ -42,7 +42,7 @@
     
             <div class="section-title">
               <h2>What we Offer</strong></h2>
-              <p>We  Offer The Best Services</p>
+              <p>Best Services</p>
             </div>
     
             <div class="row">
